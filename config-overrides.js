@@ -8,6 +8,7 @@ module.exports = override(
       libraryDirectory: 'es',
       style: true,//自动打包相关的样式
     }),
+    //使用less-loader对源码中的less的变量进行重新指定
     addLessLoader({
       javascriptEnabled: true,
       //改变默认主题颜色
