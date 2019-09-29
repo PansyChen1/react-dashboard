@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # react-dashborad
 ## 1.技术选型
 ### 1）前台数据展现/交互/组件化         
