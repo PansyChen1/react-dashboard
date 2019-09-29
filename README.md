@@ -23,3 +23,11 @@ webpack/create-react-app/eslint
 ### 6）utils：工具模块
 ### 7）App.js：应用根组件
 ### 8）index.js：入口js文件
+## 3.安装命令
+### 1)安装组件库 yarn add antd
+### 2)实现组件的按需打包 yarn add react-app-rewired customize-cra babel-plugin-import
+### 3)自定义antd主题 yarn add less less-loader 同时修改config-overrides.js文件
+### 4)
+### 5)
+### 6)
+### 7)
