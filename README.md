@@ -37,32 +37,19 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# react-dashborad
+## 1.技术选型
+### 1）前台数据展现/交互/组件化         
+react/react-router-dom/antd/redux
+### 2）后台应用        
+node/mongodb/mongoose/multer/blueimp-md5
+### 3）前后台交互
+ajax请求：axios/jsonp/promise/async/await        
+接口测试工具：postman       
+### 4）模块化     
+ES6/CommonJS       
+### 5）项目构建/工程化        
+webpack/create-react-app/eslint       
+### 6）其他     
+富文本编辑器：react-draft-wysiwyg/draft-js/draftjs-to-html      
+图表库：echarts/echarts-for-react
