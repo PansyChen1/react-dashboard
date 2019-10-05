@@ -25,9 +25,13 @@ webpack/create-react-app/eslint
 ### 8）index.js：入口js文件
 ## 3.安装命令
 ### 1)安装组件库 yarn add antd
-### 2)实现组件的按需打包 yarn add react-app-rewired customize-cra babel-plugin-import
+### 2)实现组件的按需打包 yarn add react-app-rewired customize-cra babel-plugin-import 同时修改package.json文件（scripts的修改）
 ### 3)自定义antd主题 yarn add less less-loader 同时修改config-overrides.js文件
 ### 4)引入路由 yarn add react-router-dom
-### 5)
-### 6)
-### 7)
+### 5)安装axios yarn add axios
+### 6)安装本地存储 yarn add store
+
+## 4.维持登陆与自动登陆
+### 1）登陆后，刷新依然是已登陆状态（维持登陆）
+### 2）登陆后，关闭浏览器后打开浏览器访问依然是已登陆状态（自动登陆）
+### 3）登陆后，访问登陆路径自动跳转到管理界面

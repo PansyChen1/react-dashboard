@@ -11,6 +11,7 @@ export default class App extends Component{
 
   render() {
     return (
+        // 最外层有一个路由器 也可以使用HashRouter 不同表现为在url中多一个#
         <BrowserRouter>
           {/*只匹配其中的一个*/}
           <Switch>
