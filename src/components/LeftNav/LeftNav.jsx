@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./LeftNav.less";
 import logo from '../../assets/images/login-logo.jpg';
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Menu, Icon } from 'antd';
 import menuList from "../../config/muneConfig";
 const { SubMenu } = Menu;
 
-export default class LeftNav extends Component{
+class LeftNav extends Component{
 
   /*
   * 根据mune的数据数组生成对应的标签数组
@@ -56,6 +56,7 @@ export default class LeftNav extends Component{
   * 使用reduce() + 递归调用
   */
   getMenuNode_reduce = (menuList) => {
+    const path = this.props.location.pathname;
     return menuList.reduce((pre, item) => {
       //向pre中添加item或者submenu
       if (!item.children) {
@@ -68,6 +69,14 @@ export default class LeftNav extends Component{
             </Menu.Item>
         ))
       } else {
+              // 查找一个与当前请求路径匹配的子item
+              const cItem = item.children.find(cItem => cItem.key === path);
+
+              if (cItem) {
+                // 如果存在，说明当前item的子列表需要展开,this是指组件对象
+                this.openKey = item.key;
+              }
+
               pre.push((
                   <SubMenu
                       key={item.key}
@@ -89,7 +98,19 @@ export default class LeftNav extends Component{
     }, [])
   };
 
+      // 在第一次render()之前执行一次
+  //为第一次render渲染准备数据（必须是同步的）
+  componentWillMount() {
+    this.menuNodes = this.getMenuNode_reduce(menuList);
+  }
+
   render() {
+    //得到当前请求的路由路径 直接这样写的话pathname是undefined 因为这不是一个路由组件 可以通过withRouter高阶组件
+    const path = this.props.location.pathname;
+
+    //得到需要打开菜单项的key
+    const openKey = this.openKey;
+
     return (
         <div className="left-nav">
           <Link to="/home" className="left-nav-header">
@@ -100,6 +121,8 @@ export default class LeftNav extends Component{
           <Menu
               mode="inline"
               theme="dark"
+              selectedKeys={[path]}
+              defaultOpenKeys={[openKey]}
           >
             {/*
             <Menu.Item key="1">
@@ -151,10 +174,16 @@ export default class LeftNav extends Component{
             </SubMenu>
             */}
             {
-              this.getMenuNode_reduce(menuList)
+              this.menuNodes
             }
           </Menu>
         </div>
     )
   }
 }
+
+/*
+* withRouter高阶组件
+* 包装非路由的组件，返回一个新的组件，向非路由组件传递三个属性 history/location/match
+* */
+export default withRouter(LeftNav)
