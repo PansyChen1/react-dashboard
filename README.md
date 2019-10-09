@@ -30,6 +30,7 @@ webpack/create-react-app/eslint
 ### 4)引入路由 yarn add react-router-dom
 ### 5)安装axios yarn add axios
 ### 6)安装本地存储 yarn add store
+### 7)安装jsonp yarn add jsonp
 
 ## 4.维持登陆与自动登陆
 ### 1）登陆后，刷新依然是已登陆状态（维持登陆）

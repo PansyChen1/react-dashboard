@@ -124,6 +124,7 @@ class LeftNav extends Component{
               selectedKeys={[path]}
               defaultOpenKeys={[openKey]}
           >
+            {/*非动态的列表*/}
             {/*
             <Menu.Item key="1">
               <Link to="/home">

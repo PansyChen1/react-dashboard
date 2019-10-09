@@ -1,4 +1,46 @@
 .header {
   height: 80px;
-  line-height: 80px;
+  background-color: #fff;
+  .header-top {
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    padding-right: 20px;
+    border-bottom: 1px solid #1DA57A;
+    span {
+      padding-right: 10px;
+    }
+  }
+  .header-bottom {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    .header-bottom-left {
+      width: 8%;
+      font-size: 20px;
+      position: relative;
+      text-align: center;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 50%;
+        top: 116%;
+        transform: translateX(50%);
+        border-bottom: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-left: 12px solid transparent;
+        border-top: 12px solid #fff;
+      }
+    }
+    .header-bottom-right {
+      width: 92%;
+      text-align: right;
+      margin-right: 30px;
+      img {
+        width: 25px;
+        height: 25px;
+        margin: 0 20px;
+      }
+    }
+  }
 }
