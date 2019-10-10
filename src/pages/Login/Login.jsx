@@ -1,21 +1,17 @@
 import React, {Component} from 'react';
-import { Form, Icon, Input, Button, message} from 'antd';
+import { Form, Icon, Input, Button} from 'antd';
 import './Login.less';
 import logo from "../../assets/images/login-logo.jpg";
 
-import {reqLogin}from "../../api/index";
-import memoryUtils from "../../utils/memoryUtils";
-import storageUtils from "../../utils/storageUtils";
-import {Redirect} from "react-router-dom";
+// import {reqLogin}from "../../api/index";
+// import memoryUtils from "../../utils/memoryUtils";
+// import storageUtils from "../../utils/storageUtils";
+// import {Redirect} from "react-router-dom";
 
 const Item = Form.Item;//不能写在import之前
 
 //登陆的路由组件
 class Login extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   handleSubmit = (event) => {
     // 阻止事件的默认行为
     event.preventDefault();

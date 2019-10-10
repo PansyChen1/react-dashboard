@@ -6,7 +6,7 @@ const menuList = [
   },
   {
     title: "商品",
-    key: "/category",
+    key: "/commodity",
     icon: "shop",
     children : [
       {

@@ -1,0 +1,7 @@
+import React from "react";
+import "./LinkButton.less";
+
+//外形像链接的按钮
+export default function LinkButton(props) {
+    return (<button {...props} className="link-btn"></button>)
+}
